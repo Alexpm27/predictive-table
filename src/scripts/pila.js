@@ -65,7 +65,7 @@ function obtenerProduccion(noTerminal, next) {
     "C": ["aceptacion"],
     "V": ["}"],
     "I": ["{"],
-    "SM": /[a-z0-9]/.test(next) ? [next] : null,
+    "SM": /^[a-z0-9]$/i.test(next) ? [next] : null,
     "N": /^q[0-9]$/.test(next) ? [next] : null
   };
 
